@@ -1,0 +1,77 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "728d3aa5-c38a-40e8-87ae-36e404d88db4"
+  "atom-fuzzy-grep":
+    grepCommandString: "ack -i --no-color --no-group --column --ignore-dir=node_modules --ignore-dir=dist --ignore-dir=vendors --ignore-dir=www --ignore-dir=.bato --ignore-dir=bower_components"
+    showFullPath: true
+  "autocomplete-emojis":
+    enableUnicodeEmojis: false
+  core:
+    allowPendingPaneItems: false
+    disabledPackages: [
+      "language-gfm"
+      "double-click-tree-view"
+      "git-plus"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+      "node_modules"
+      "yarn.lock"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "one-light-ui"
+      "one-light-syntax"
+    ]
+    titleBar: "custom"
+  docblockr:
+    per_section_indent: true
+    return_description: false
+  editor:
+    fontSize: 15
+    showInvisibles: true
+    tabLength: 4
+    tabType: "soft"
+  "exception-reporting":
+    userId: "e7d5c704-7c09-7364-2580-b35d97228b7b"
+  "fuzzy-finder":
+    ignoredNames: [
+      "dist"
+      "package"
+      "node_modules"
+      "bower_components"
+    ]
+  "git-blame":
+    columnWidth: 276
+  linter: {}
+  "linter-eslint": {}
+  "linter-ui-default":
+    panelHeight: 69
+  "markdown-preview":
+    useGitHubStyle: true
+  "markdown-preview-plus":
+    useGitHubStyle: true
+  minimap:
+    plugins:
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+  "prettier-atom":
+    formatOnSaveOptions: {}
+    useEslint: true
+  "terminal-plus":
+    core:
+      mapTerminalsTo: "Folder"
+  "tree-view": {}
+  welcome:
+    showOnStartup: false

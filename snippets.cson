@@ -1,0 +1,255 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+
+'.source.md':
+  'hat':
+    'prefix': 'hat'
+    'body': """<a href="$1" target="_blank">$2</a>"""
+
+'.source.js':
+
+  'function':
+    'prefix': 'fn'
+    'body': """
+    function ($1) {
+        $2
+    }
+    """
+
+  'arrow function':
+     'prefix': 'ff'
+     'body': """
+     ($1) => {
+         $2
+     }
+     """
+
+  'function (error) =>':
+    'prefix': 'fef'
+    'body': """
+    (error) => {
+        $1
+    }
+    """
+
+  'function (error) => and reject':
+    'prefix': 'fefe'
+    'body': """
+    (error) => {
+        reject(error);
+    }
+    """
+
+  'resolve':
+    'prefix': 'rv'
+    'body': """
+    resolve($1);
+    """
+
+  'reject':
+    'prefix': 'rj'
+    'body': """
+    reject($1);
+    """
+
+  'fncatch':
+    'prefix': 'fnch'
+    'body': """
+    .catch(function(error) {
+        $1
+    });
+    """
+
+  'that = this':
+     'prefix': 'tt'
+     'body': """
+     var that = this;
+     """
+
+
+  'debugger':
+    'prefix': 'dgg'
+    'body': """debugger;"""
+
+  'new promise arrow function':
+     'prefix': 'pff'
+     'body': """
+     new Promise((resolve, reject) => {
+         $1
+     })
+     """
+
+  'return promise arrow function':
+    'prefix': 'rpff'
+    'body': """
+
+    return new Promise((resolve, reject) => {
+        $1
+    });
+
+    """
+
+  'return promise function':
+    'prefix': 'rpfn'
+    'body': """
+
+    return new Promise(function (resolve, reject) {
+        $1
+    });
+
+    """
+
+  'tff':
+    'prefix': 'tff'
+    'body': """
+    .then(() => {
+        resolve();
+    })
+    .catch((error) => {
+        reject(error);
+    });
+    """
+
+  'tfn':
+    'prefix': 'tfn'
+    'body': """
+    .then(function () {
+        resolve();
+    })
+    .catch(function (error) {
+        reject(error);
+    });
+    """
+
+  'mff':
+    'prefix': 'mff'
+    'body': """
+    module.exports = ($1) => {
+        $2
+    };
+    """
+
+  'mfn':
+    'prefix': 'mfn'
+    'body': """
+    module.exports = function ($1) {
+        $2
+    };
+    """
+
+  'module.exports':
+    'prefix': 'me'
+    'body': """module.exports = $1;"""
+
+  'reject if error':
+    'prefix': 'rif'
+    'body': """
+    if (error) {
+        return reject(error);
+    }
+
+
+    """
+
+  'mdr':
+    'prefix': 'mdr'
+    'body': """
+    module.exports = function (req, res) {
+        var logger = req.di.getLogger();
+        var api = req.di.getApi();
+
+        $2
+    };
+    """
+  'mdc':
+    'prefix': 'mdc'
+    'body': """
+    'use strict';
+
+    class $1 {
+        $2
+    }
+
+    module.exports = $1;
+
+    """
+  '_lodash':
+    'prefix': '_lodash'
+    'body': "var _ = require('lodash');"
+
+  '_moment':
+    'prefix': '_moment'
+    'body': "var moment = require('moment');"
+
+  '_superagent':
+    'prefix': '_superagent'
+    'body': "var request = require('superagent');"
+
+  '_joi':
+    'prefix': '_joi'
+    'body': "var joi = require('joi');"
+
+  '_path':
+    'prefix': '_path'
+    'body': "var path = require('path');"
+
+  'dggp':
+    'prefix': 'dggp'
+    'body': """
+    if (typeof window != 'undefined' && window && window.debugProcess) {
+        window.debugProcess.debug($1, $2);
+    } else if (typeof global != 'undefined' && global && global.debugProcess) {
+        global.debugProcess.debug($1, $2);
+    }$0
+    """
+
+   'rs':
+     'prefix': 'rs'
+     'body': """
+     var logger = req.di.logger;
+     var api = req.di.api;
+
+
+     """
+   'ere':
+     'prefix': 'ere'
+     'body': """
+     var ec = {
+         $1
+     };
+
+     if (!error.checkable) {
+         return res.logServerError(error);
+     }
+
+     error.getCheckChain(res.logServerError)
+        $2
+        .check();
+     """
+
+   'ct':
+     'prefix': 'ct'
+     'body': """console.time('$1');"""
+
+   'ctt':
+     'prefix': 'ctt'
+     'body': """console.timeEnd('$1');"""
